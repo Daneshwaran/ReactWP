@@ -16,7 +16,6 @@ export interface IMsGraphWebPartProps {
 }
 
 export default class MsGraphWebPart extends BaseClientSideWebPart<IMsGraphWebPartProps> {
-
   public render(): void {
     this.context.msGraphClientFactory.getClient()
     .then((client:MSGraphClient):void=>{
@@ -27,7 +26,6 @@ export default class MsGraphWebPart extends BaseClientSideWebPart<IMsGraphWebPar
           graphClient:client
         }
       );
-  
       ReactDom.render(element, this.domElement);
     });
   }

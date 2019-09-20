@@ -8,4 +8,5 @@ export interface IMsGraphProps {
 export interface IMsGraphState {
   name:any;
   email:any;
+  excel:any;
 }
