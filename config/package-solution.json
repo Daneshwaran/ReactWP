@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-wp-client-side-solution",
+    "id": "d1e9f8c7-b77f-4354-8430-4223718fbbbc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/react-wp.sppkg"
+  }
+}
