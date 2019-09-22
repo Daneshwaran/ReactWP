@@ -6,6 +6,6 @@ export interface IMsGraphProps {
 }
 
 export interface IChart {
-  chartData: {}
+  chartData: {};
 }
 

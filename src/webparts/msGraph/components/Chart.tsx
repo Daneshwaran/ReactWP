@@ -34,19 +34,19 @@ export default class Chart extends React.Component<IChart, {  chartData: {} }>{
             }]
           }
         };
-      }
+    }
 
-    render() {
+    public render() {
         return (
             <div className={styles.barChart}>
                 <Bar
-                    data={this.state.chartData}
+                    data={this.props.chartData}
                     width={100}
                     height={500}
                     options={{ maintainAspectRatio: false }}
                 />
             </div>
-        )
+        );
     }
 }
 
