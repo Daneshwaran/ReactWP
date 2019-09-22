@@ -10,6 +10,7 @@ import {
 import * as strings from 'MsGraphWebPartStrings';
 import MsGraph from './components/MsGraph';
 import { IMsGraphProps } from './components/IMsGraphProps';
+import { MSGraphClient } from '@microsoft/sp-http';
 
 export interface IMsGraphWebPartProps {
   description: string;
@@ -18,14 +19,19 @@ export interface IMsGraphWebPartProps {
 export default class MsGraphWebPart extends BaseClientSideWebPart<IMsGraphWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IMsGraphProps > = React.createElement(
-      MsGraph,
-      {
-        description: this.properties.description
-      }
-    );
+    this.context.msGraphClientFactory.getClient()
+    .then((client:MSGraphClient):void => {
 
-    ReactDom.render(element, this.domElement);
+      const element: React.ReactElement<IMsGraphProps > = React.createElement(
+        MsGraph,
+        {
+          description: this.properties.description,
+          graphClient:client
+        }
+      );
+  
+      ReactDom.render(element, this.domElement);
+    });
   }
 
   protected onDispose(): void {
