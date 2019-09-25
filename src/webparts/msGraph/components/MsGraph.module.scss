@@ -1,6 +1,9 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
 .msGraph {
+  .barChart{
+    height:500px ;
+  }
   .container {
     max-width: 700px;
     margin: 0px auto;

@@ -10,7 +10,8 @@ import {
 import * as strings from 'MsGraphWebPartStrings';
 import MsGraph from './components/MsGraph';
 import { IMsGraphProps } from './components/IMsGraphProps';
-import {MSGraphClient} from '@microsoft/sp-http';
+import { MSGraphClient } from '@microsoft/sp-http';
+
 export interface IMsGraphWebPartProps {
   description: string;
 }
@@ -26,6 +27,7 @@ export default class MsGraphWebPart extends BaseClientSideWebPart<IMsGraphWebPar
           graphClient:client
         }
       );
+  
       ReactDom.render(element, this.domElement);
     });
   }

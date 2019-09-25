@@ -2,11 +2,10 @@ import { MSGraphClient } from "@microsoft/sp-http";
 
 export interface IMsGraphProps {
   description: string;
-  graphClient:MSGraphClient;
+  graphClient: MSGraphClient;
 }
 
-export interface IMsGraphState {
-  name:any;
-  email:any;
-  excel:any;
+export interface IChart {
+  chartData: {};
 }
+
