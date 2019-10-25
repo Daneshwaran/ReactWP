@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './MsGraph.module.scss';
-import { IMsGraphProps, IMsGraphState } from './IMsGraphProps';
+import { IMsGraphProps } from './IMsGraphProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { Bar } from 'react-chartjs-2';
 import Chart from './Chart';
@@ -41,9 +41,10 @@ export default class MsGraph extends React.Component<IMsGraphProps, { name: any,
   public componentDidMount(): void {
     //var 
     this.props.graphClient
-      .api("sites/danesh96.sharepoint.com,1e8f08be-d4db-43d8-a398-198099a9378b,a89d96e0-bb32-4cc1-a664-2d63c703214b/drive/root:/new.xlsx:/workbook/tables('1')/rows")
+      .api("users/daneshwaran.m.ext@nokia.com/employeeId")
       .get((error: any, response: any, rawResponse?: any) => {
         if(response !== undefined){
+          console.log(response);
           this.setState({
             name: '',
             email: "email",
