@@ -41,7 +41,7 @@ export default class MsGraph extends React.Component<IMsGraphProps, { name: any,
   public componentDidMount(): void {
     //var 
     this.props.graphClient
-      .api("users/daneshwaran.m.ext@nokia.com/employeeId")
+      .api("me")
       .get((error: any, response: any, rawResponse?: any) => {
         if(response !== undefined){
           console.log(response);
